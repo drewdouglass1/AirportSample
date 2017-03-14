@@ -28,10 +28,11 @@ The sample application uses three dependencies: A JSON library, javax.servlet AP
 
 - The JSON library and javax.servlet API are specified as dependencies in the POM.xml file. Maven will download the library from a public Maven repository and package it into the final artifact
 - The ogclient.jar is NOT available in a public Maven repository. Download ogclient.jar from:
+
     ``` 
- https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyEeO3qtc4gZ02Xw/downloads#https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyEeO3qtc4gZ02Xw/downloads 
+     https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyEeO3qtc4gZ02Xw/downloads#https://hub.jazz.net/project/abchow/CachingSamples/abchow%2520%257C%2520CachingSamples/_2fYdgJMyEeO3qtc4gZ02Xw/_2fl44JMyEeO3qtc4gZ02Xw/downloads 
     ``` 
-    Add it to your local repository by running the following maven command:
+   Add it to your local repository by running the following maven command:
 
     ```
     $ mvn install:install-file -Dfile=<path-to-ogclient.jar> \
