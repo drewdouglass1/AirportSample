@@ -116,5 +116,20 @@ cf restage <app name>
 # Accessing The Application 
 Logon to ACE console: https://console.ng.bluemix.net and find your application on the dashboard.Clicking on the link provided will launch your sample application.
 
+# Troubleshooting
+These are some suggestions on how you can troubleshoot the problem is the application is not running properly or an operation on the WebSphere eXtreme Scale failed. Check the application logs - from the Bluemix UI console, click on your application and select 'Logs'. Check for any error messages in the logs.
+
+If there is a connection exception such as: 
+- Go to the Bluemix console, click on your application. Select 'Runtime', then select the 'Environment variables' tab. Under VCAP services, ensure that the correct information is passed in for credentials (catalogEndPoint, gridName, password, username). Check that the Bluemix HOSTSALIAS environment variables are set correctly. 
+- Check that the name of the user provided service contains the prefix XSSimple or XSSession (depending on the Grid type) 
+- Ensure that the grid created is of type 'Simple' or 'Session'
+
+If there is a security exception such as: 
+```
+APP/0    Failed to connect to grid
+APP/0    [err] javax.cache.CacheException: com.ibm.websphere.objectgrid.ConnectException: CWOBJ1325E: There was a Client security configuration error. The catalog server at endpoint 129.41.233.108:4,809 is configured with SSL. However, the Client does not have SSL configured. The Client SSL configuration is null.
+```
+- This error indicates that the client application was not configured with SSL but WebSphere eXtreme Scale was configured with SSL
+
 # License 
 See LICENSE for license information
