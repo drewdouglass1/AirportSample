@@ -1,0 +1,5 @@
+com\ibm\websphere\xs\sample\airport\client\AirportClient.class
+com\ibm\websphere\xs\sample\airport\client\AirportPreloadServlet.class
+com\ibm\websphere\xs\sample\airport\domain\AirportCodes.class
+com\ibm\websphere\xs\sample\airport\client\AirportServlet.class
+com\ibm\websphere\xs\sample\airport\domain\AirportData.class
