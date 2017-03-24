@@ -82,11 +82,11 @@ cf cups <service-name> -p <path to/credentials.json file>
 //Replace <service-name> with a name of your choosing BUT service name must have 'XSSimple' (for a simple cache) 
 or 'XSSession' (for a session cache) as the prefix. For example:XSSimple-credentials or XSSession-credentials***
 ```
-# Running The Application (UNDER CONSTRUCTION) 
- Once you have successfully logged in, push the WAR file to your Bluemix account with a Java Buildpack:
+# Running The Application 
+ Once you have successfully logged in, push the WAR file to your Bluemix account with the Liberty Buildpack:
 
 ```
-cf push <app name> -p AirportSampleApp.war -b https://github.com/cloudfoundry/java-buildpack
+cf push <app name> -p AirportSampleApp.war
 
 // If you get an error message about hostname being taken, this means that the app name was taken by someone else
 Try this step again with a new app name
