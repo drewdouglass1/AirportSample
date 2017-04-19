@@ -71,7 +71,7 @@ public class AirportClient {
     				  
   					for (String name:names) {
   						
-                      	if (name.startsWith("DataCache")) {
+                      	if (name.startsWith("user")) {
                       		
                				JSONArray val = obj.getJSONArray(name);
                				JSONObject serviceAttr = val.getJSONObject(0);
